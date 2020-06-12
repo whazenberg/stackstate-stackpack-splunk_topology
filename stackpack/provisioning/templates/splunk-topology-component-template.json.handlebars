@@ -1,0 +1,38 @@
+{
+    "_type": "Component",
+    "checks": [],
+    "streams": [],
+    "labels": [
+        \{{#if element.data.labels \}}
+            \{{# join element.data.labels "," "" "," \}}
+            {
+            "_type": "Label",
+            "name": "\{{ this \}}"
+            }
+            \{{/ join \}}
+        \{{/if\}}
+        {
+            "_type": "Label",
+            "name": "stackpack:splunk"
+        }
+        \{{#if element.data.tags \}}
+            \{{# join element.data.tags "," "," "" \}}
+            {
+              "_type": "Label",
+              "name": "\{{ this \}}"
+            }
+            \{{/ join \}}
+        \{{/if\}}
+    ],
+    "name": "\{{#if element.data.name\}}\{{ element.data.name \}}\{{else\}}\{{ element.externalId \}}\{{/if\}}",
+    \{{#if element.data.description\}}
+    "description": "\{{ element.data.description \}}",
+    \{{/if\}}
+    "type" : \{{ resolveOrCreate "ComponentType" element.type.name "Unspecified" \}},
+    "version": "\{{ element.data.version \}}",
+    "layer": \{{ resolveOrCreate "Layer" element.data.layer "Unspecified" \}},
+    "domain": \{{ resolveOrCreate "Domain" element.data.domain "Unspecified" \}},
+    "environments": [
+        \{{ resolveOrCreate "Environment" element.data.environment "Unspecified" \}}
+    ]
+}
