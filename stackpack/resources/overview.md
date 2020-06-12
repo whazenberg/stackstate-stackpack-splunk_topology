@@ -30,7 +30,7 @@ A component saved search requires to output the following table columns.
 | **domain** | no | The StackState domain where the component should be visualized. If omitted, `Unspecified` is used. |
 | **layer** | no | The StackState layer in where the component should be visualized. If omitted, `Unspecified` is used. |
 | **environment** | no | The StackState environment in where the component should be visualized. If omitted, `Unspecified` is used. |
-| **labels** | no | The StackState labels that the component should have. This field can either by a multivalue field, a single String, or a comma separated String, e.g. "label1,key:value". |
+| **labels** | no | The StackState labels that the component should have. This field can either be a multivalue field, a single String, or a comma separated String, e.g. "label1,key:value". |
 | **identifiers** | no | The StackState identifiers the component should have for merging between synchronizations/topology data sources. This field can either by a multivalue field, a single String, or a comma separated String, e.g. "id1,fqdn2". |
 
 Fields are case sensitive. Additional fields are added as meta data to the component.
