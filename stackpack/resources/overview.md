@@ -62,6 +62,6 @@ Example;
 
 ```
 | makeresults
-| eval sourceid = "my_component_identifier_1", targetid = "my_component_identifier_2", type = "depends on"
-| table sourceid, targetid, type
+| eval sourceId = "my_component_identifier_1", targetId = "my_component_identifier_2", type = "depends on"
+| table sourceId, targetId, type
 ```
